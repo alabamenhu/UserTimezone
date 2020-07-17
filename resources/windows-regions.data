@@ -1,0 +1,414 @@
+# Windows reports regions in a unique numerical format because of course.
+# To properly determine the optimal Olsen ID, a country or region ID is
+# also needed.  This file is a basic equivalency table, based on Microsoft's
+# table found at
+# https://docs.microsoft.com/en-us/windows/win32/intl/table-of-geographical-locations
+# The format of this file is simple:
+#   - Comments begin with #
+#   - Blank lines (or lines with only whitespace/comments) are ignored
+#   - Integer ID and Region ID are whitespace separated
+
+2    AG    # Antigua & Barbuda
+3    AF    # Afghanistan
+4    DZ    # Algeria
+5    AZ    # Azerbaijan
+6    AL    # Albania
+7    AM    # Armenia
+8    AD    # Andorra
+9    AO    # Angola
+10   AS    # American Samoa
+11   AR    # Argentina
+12   AU    # Australia
+           # 13 undefined
+14   AT    # Austria
+           # 15..16 undefined
+17   BH    # Bahrain
+18   BB    # Barbados
+19   BW    # Botswana
+20   BM    # Bermuda
+21   BE    # Belgium
+22   BS    # Bahamas
+23   BD    # Bangladesh
+24   BZ    # Belize
+25   BA    # Bosnia & Herzegovina
+26   BO    # Bolivia
+27   MM    # Myanmar (Burma)
+28   BJ    # Benin
+29   BY    # Belarus
+30   SB    # Solomon Islands
+32   BR    # Brazil
+           # 33 undefined
+34   BT    # Bhutan
+35   BG    # Bulgaria
+           # 36 undefined
+37   BN    # Brunei
+38   BI    # Burundi
+39   CA    # Canada
+40   KH    # Cambodia
+41   TD    # Chad
+42   LK    # Sri Lanka
+43   CG    # Congo (Brazzaville; Republic of)
+44   CD    # Congo (Kinshasa; Dem. Rep. of)
+45   CN    # China
+46   CL    # Chile
+           # 47..48 undefined
+49   CM    # Cameroon
+50   KM    # Comoros
+51   CO    # Colombia
+           # 52..53 undefined
+54   CR    # Costa Rica
+55   CF    # Central African Republic
+56   CU    # Cuba
+57   CV    # Cape Verde
+           # 58 undefined
+59   CY    # Cyprus
+           # 60 undefined
+61   DK    # Denmark
+62   DJ    # Djibouti
+63   DM    # Dominica
+           # 64 undefined
+65   DO    # Dominican Republic
+66   EC    # Ecuador
+67   EG    # Egypt
+68   IE    # Ireland
+69   GQ    # Equatorial Guinea
+70   EE    # Estonia
+71   ER    # Eritrea
+72   SV    # El Salvador
+73   ET    # Ethiopia
+           # 74 undefined
+75   CZ    # Czechia (Czech Republic)
+           # 76 undefined
+77   FI    # Finland
+78   FJ    # Fiji
+           # 79 undefined
+80   FM    # Micronesia
+81   FO    # Faroe Islands
+           # 82..83 undefined
+84   FR    # France
+           # 85 undefined
+86   GM    # Gambia
+87   GA    # Gabon
+88   GE    # Georgia
+89   GH    # Ghana
+90   GI    # Gibraltar
+91   GD    # Grenada
+           # 92 undefined
+93   GL    # Greenland
+94   DE    # Germany
+           # 95..97 undefined
+98   GR    # Greece
+99   GT    # Guatemala
+100  GN    # Guinea
+101  GY    # Guyana
+           # 102 undefined
+103  HT    # Haiti
+104  HK    # Hong Kong
+           # 105 undefined
+106  HN    # Honduras
+           # 107 undefined
+108  HR    # Croatia
+109  HU    # Hungary
+110  IS    # Iceland
+111  ID    # Indonesia
+113  IN    # India
+114  IO    # British Indian Ocean Territory
+           # 115 undefined
+116  IR    # Iran
+117  IL    # Israel
+118  IT    # Italy
+119  CI    # Côte d’Ivoire
+           # 120 undefined
+121  IQ    # Iraq
+122  JP    # Japan
+           # 123 undefined
+124  JM    # Jamaica
+125  SJ    # Svalbard & Jan Mayen (Jan Mayen only)
+126  JO    # Jordan
+127  US    # Johnston Atoll -- Undefined CLDR, but belongs to US
+129  KE    # Kenya
+130  KG    # Kyrgyzstan
+131  KP    # North Korea
+           # 132 undefined
+133  KI    # Kiribati
+134  KR    # South Korea
+           # 135 undefined
+136  KW    # Kuwait
+137  KZ    # Kazakhstan
+138  LA    # Laos
+139  LB    # Lebanon
+140  LV    # Latvia
+141  LT    # Lithuania
+142  LR    # Liberia
+143  SK    # Slovakia
+           # 144 undefined
+145  LI    # Liechtenstein
+146  LS    # Lesotho
+147  LU    # Luxembourg
+148  LY    # Libya
+149  MG    # Madagascar
+           # 150 undefined
+151  MO    # Macao
+152  MD    # Moldova
+           # 153 Undefined
+154  MN    # Mongolia
+           # 155 Undefined
+156  MW    # Malawi
+157  ML    # Mali
+158  MC    # Monaco
+159  MA    # Morocco
+160  MU    # Mauritius
+           # 161 Undefined
+162        #    MR   # Mauritania
+163  MT    # Malta
+164  OM    # Oman
+165  MV    # Maldives
+166  MX    # Mexico
+167  MY    # Malaysia
+168  MZ    # Mozambique
+           # 169..172 undefined
+173  NE    # Niger
+174  VU    # Vanuatu
+175  NG    # Nigeria
+176  NL    # Netherlands
+177  NO    # Norway
+178  NP    # Nepal
+           # 179 undefined
+180  NR    # Nauru
+181  SR    # Suriname
+182  NI    # Nicaragua
+183  NZ    # New Zealand
+184  PS    # Palestine
+185  PY    # Paraguay
+           # 186 undefined
+187  PE    # Peru
+           # 188..189 undefined
+190  PK    # Pakistan
+191  PL    # Poland
+192  PA    # Panama
+193  PT    # Portugal
+194  PG    # Papua New Guinea
+195  PW    # Palau
+196  GW    # Guinea-Bissau
+197  QA    # Qatar
+198  RE    # Réunion
+199  MH    # Marshall Islands
+200  RO    # Romania
+201  PH    # Philippines
+202  PR    # Puerto Rico
+203  RU    # Russia
+204  RW    # Rwanda
+205  SA    # Saudi Arabia
+206  PM    # St. Pierre & Miquelon
+207  KN    # St. Kitts & Nevis
+208  SC    # Seychelles
+209  ZA    # South Africa
+210  SN    # Senegal
+           # 211 undefined
+212  SI    # Slovenia
+213  SL    # Sierra Leone
+214  SM    # San Marino
+215  SG    # Singapore
+216  SO    # Somalia
+217  ES    # Spain
+218  LC    # St. Lucia
+219  SD    # Sudan
+220  SJ    # Svalbard & Jan Mayen (Svalbard only)
+221  SE    # Sweden
+222  SY    # Syria
+223  CH    # Switzerland
+224  AE    # United Arab Emirates
+225  TT    # Trinidad & Tobago
+           # 226 undefined
+227  TH    # Thailand
+228  TJ    # Tajikistan
+           # 229..230 undefined
+231  TO    # Tonga
+232  TG    # Togo
+233  ST    # São Tomé &amp; Príncipe
+234  TN    # Tunisia
+235  TR    # Turkey
+236  TV    # Tuvalu
+237  TW    # Taiwan
+238  TM    # Turkmenistan
+239  TZ    # Tanzania
+240  UG    # Uganda
+241  UA    # Ukraine
+242  GB    # United Kingdom
+           # 243 undefined
+244  US    # United States
+245  BF    # Burkina Faso
+246  UY    # Uruguay
+247  UZ    # Uzbekistan
+248  VC    # St. Vincent & Grenadines
+249  VE    # Venezuela
+           # 250 undefined
+251  VN    # Vietnam
+252  VI    # U.S. Virgin Islands
+253  VA    # Vatican City
+254  NA    # Namibia
+           # 255..257 undefined
+258  US    # Wake Island (not in CLDR, belongs to US)
+259  WS    # Samoa
+260  SZ    # Eswatini (Swaziland)
+261  YE    # Yemen
+           # 262 undefined
+263  ZM    # Zambia
+264  ZW    # Zimbabwe
+           # 265..268 undefined
+269  CS    # Serbia and Montenegro (not in CLDR as such, historic)
+270  ME    # Montenegro
+271  RS    # Serbia
+           # 272 undefined
+273  CW    # Curaçao
+           # 275 undefined
+276  SS    # South Sudan
+           # 277..299 undefined
+300  AI    # Anguilla
+301  AQ    # Antarctica
+302  AW    # Aruba
+303  AC    # Ascension Island
+304  AU    # Ashmore & Cartier Islands (not in CLDR, owned by Australia)
+305  US    # Baker Island (not in CLDR, owned by United States)
+306  BV    # Bouvet Island
+307  KY    # Cayman Islands
+308  GB    # Channel Islands (not in CLDR; not technically GB, but closest match)
+309  CX    # Christmas Island
+310  CP    # Clipperton Island
+311  CC    # Cocos (Keeling) Islands
+312  CK    # Cook Islands
+313  AU    # Coral Sea Islands (not in CLDR, owned by United States)
+314  DG    # Diego Garcia
+315  FK    # Falkland Islands (Islas Malvinas)
+           # 316 undefined
+317  GF    # French Guiana
+318  PF    # French Polynesia
+319  TF    # French Southern Territories
+           # 320 undefined
+321  GP    # Guadeloupe
+322  GU    # Guam
+323  US    # Guantanamo Bay (not in CLDR, rented by US, owned by Cuba)
+324  GG    # Guernsey
+325  HM    # Heard & McDonald Islands
+326  US    # Howland Island (not in CLDR; owned by US, but in special nautical time zone)
+327  US    # Jarvis Island (not in CLDR; owned by US)
+328  JE    # Jersey
+329  US    # Kingman Reef (not in CLDR; owned by US)
+330  MQ    # Martinique
+331  YT    # Mayotte
+332  MS    # Montserrat
+333  AN    # Netherlands Antilles (not in CLDR; historic)
+334  NC    # New Caledonia
+335  NU    # Niue
+336  NF    # Norfolk Island
+337  MP    # Northern Mariana Islands
+338  US    # Palmyra Atoll (not in CLDR; owned by US)
+339  PN    # Pitcairn Islands
+340  MP    # Rota Island (part of Northern Mariana Islands)
+341  MP    # Saipan (part of Northern Mariana Islands)
+342  GS    # South Georgia &amp; South Sandwich Islands
+343  SH    # St. Helena
+           # 344..345 undefined
+346  MP    # Tinian Island (part of Northern Mariana Islands)
+347  TK    # Tokelau
+348  TA    # Tristan da Cunha
+349  TC    # Turks & Caicos Islands
+           # 350 undefined
+351  VG    # British Virgin Islands
+352  WF    # Wallis & Futuna
+           # 353..741 undefined
+742  002   # Africa
+           # 743..2128 undefined
+2129
+           # 2130..10540 undefined
+10541  150 # Europe
+           # 10542..15125 undefined
+15126  IM  # Isle of Man
+           # 15125..19617 undefined
+19618  MK  # North Macedonia
+           # 19619..20899 undefined
+20900  054 # Melanesia
+           # 20901..21205 undefined
+21206  FM  # Micronesia (why does Microsoft have this twice?!)
+           # 21207..21241 undefined
+21242  US  # Midway Islands (not in CLDR; owned by US)
+           # 21243..23580 undefined
+23581  021 # Northern America (or 003 North America?)
+           # 23581..26286 undefined
+26286  061 # Polynesia
+           # .. undefined
+27082  013 # Central America
+           # .. undefined
+27114  009 # Oceania
+           # .. undefined
+30967  SX  # Sint Maarten
+           # .. undefined
+31396  005 # South America
+           # .. undefined
+31706  MF  # St. Martin
+           # .. undefined
+39070  001 # World
+           # .. undefined
+42483  011 # Western Africa
+           # .. undefined
+42484  017 # Middle Africa
+           # .. undefined
+42487  015 # Northern Africa
+           # .. undefined
+47590  143 # Central Asia
+           # .. undefined
+47599  035 # Southeast Asia
+           # .. undefined
+47600  030 # Eastern Asia
+           # .. undefined
+47603  014 # Eastern Africa
+           # .. undefined
+47609  151 # Eastern Europe
+           # .. undefined
+47610  039 # Southern Europe
+           # .. undefined
+47611  145 # Western Asia (Middle East)
+           # .. undefined
+47614  034 # Southern Asia
+           # .. undefined
+           # WHY DOES WINDOWS DO THIS NONSENSE?!
+7299303   TL    # Timor-Leste
+                # .. undefined
+9914689   XK    # Kosovo
+                # .. undefined
+10026358   019  # Americas
+                # .. undefined
+10028789   AX   # Åland Islands
+                # .. undefined
+10039880  029   # Caribbean
+                # .. undefined
+10039882  154   # Northern Europe
+10039883  018   # Southern Africa
+                # .. undefined
+10210824  155   # Western Europe
+10210825  009   # Australia and New Zealand (not in CLDR; 009 Oceania is closest equivalent)
+                # .. undefined
+161832015  BL   # St. Barthélemy
+161832256  UM   # U.S. Outlying Islands
+161832257  419  # Latin America
+161832258  BQ   # Caribbean Netherlands (Bonaire, Sint Estatius, and Saba)
+
+
+
+# These territories come out of CLDR and haven't been added into the equivalencies list yet
+# as they aren't currently in Windows.  If Windows adds one, make a change (theoretically CLDR should be stable).
+#
+#    EA   # Ceuta &amp; Melilla
+#    EH   # Western Sahara
+#    EU   # European Union
+#    EZ   # Eurozone
+#    IC   # Canary Islands
+#    QO   # Outlying Oceania
+#    UN   # United Nations
+#    XA   # Pseudo-Accents
+#    XB   # Pseudo-Bidi
+#    ZZ   # Unknown Region
+#    053  # Australasia
+#    057  # Micronesian Region
+#    142  # Asia
+#    202  # Sub-Saharan Africa
