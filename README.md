@@ -24,7 +24,7 @@ For Windows, the ID should be acceptable and better than a GMT offset, but may o
 This is because Windows uses its own custom timezone identifiers that do not have a one-to-one relationship with Olsen IDs.
 The Windows timezone ID is combined with the Windows GeoID to provide a best-guess that should generally be accurate.
 For example, if your Windows timezone is "Central Standard Time", and your GeoID is 244 (United States), then it will be reported as **America/Chicago** (others are possible, but there is not enough information to differentiate with **America/Indiana/Knox**, so the broadest is used).
-But if your GeoID is 39 (Canada), then it will be reported as **America/Menominee**.
+But if your GeoID is 39 (Canada), then it will be reported as **America/Winnipeg**.
 
 ## Options
 
