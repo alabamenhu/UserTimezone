@@ -1,4 +1,5 @@
-# Intl::UserTimezone
+![Intl::UserTimezone for Raku](docs/logo.png)
+
 **Important notice:** This module *may* eventually be renamed to `DateTime::UserTimezone` prior to its 1.0 release; if that occurs, it will continue to *provide* under the current name for at least one year.  
 
 A simple Raku module for determining the user's timezone as an Olson (IANA or tz) identifier, particularly useful when formatting dates.
@@ -35,6 +36,11 @@ You may prefer to use the aliased forms such that **America/New_York** appears a
 
 If there is a problem determining the timezone, the default will be `Etc/GMT`, being the most generic.
 If it's clear that `UserTimezone` cannot determine things for your operating system, or is in some other way not returning the correct results, please file an issue on Github and let's figure out how to make it work on your system.
+
+# Version history
+
+- **0.1**  
+Initial release with support for Mac, some *nix machines, and (hopefully) Windows
 
 # License
 
