@@ -48,4 +48,7 @@ Except as indicated, this module and all its files is provided under the Artisti
 
 ## Except as indicated
 
-The file `windowsZones.xml` is Copyright 2020 The Unicode Consortium, and distributed without modification in accordance with its [license/terms of use](https://www.unicode.org/copyright.html).
+- The file `windowsZones.xml` is Copyright 2020 The Unicode Consortium, and distributed without modification in accordance with its [license/terms of use](https://www.unicode.org/copyright.html).
+
+[wikipedia-source-public-domain]: https://en.wikipedia.org/wiki/Time_zone#/media/File:World_Time_Zones_Map.png
+[rawpixel-source-public-domain]: https://www.rawpixel.com/image/2263362/free-image-butterfly-insect-wing
