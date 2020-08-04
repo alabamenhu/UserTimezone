@@ -14,9 +14,9 @@ my @items;
 for @win-zones {
     @items.append:
         .<other>,           # Windows TZ id
-        .<type>             # Olsen TZ id
+        .<type>             # Olson TZ id
             .split(/\h+/)   #   (some correspond to more than one, but there will be no way
-            .head,          #    to determine with more precision.  First is most general.
+            .head,          #    to determine with more precision.  First is most general.)
         .<territory>        # CLDR region id
 }
 @items.append( .<other    type    territory> ) for @win-zones;

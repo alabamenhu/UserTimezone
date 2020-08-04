@@ -15,11 +15,11 @@ say user-timezone;  # 'America/New_York'
 ```
 
 The returned string does *not* apply a metazone.
-If you wish to show a user-facing string like, e.g., "Central Europe Time", you should use the appropriate functions from `Intl::DateTime` (NYI, might go into `DateTime::*`, haven't decided yet ^_^).
+If you wish to show a user-facing string like, e.g., "Central European Time", you should use the appropriate functions from `Intl::DateTime` (NYI, might go into `DateTime::*`, haven't decided yet ^_^).
 
 For Mac OS and most *nix systems, the region is accurately grabbed from `/etc/localtime` if it exists. 
 Currently timezones indicated by the `$TZ` environmental variable are ignored, but will eventually be supported.
-
+ 
 For Windows, the ID should be acceptable and better than a GMT offset, but may occasionally be suboptimal.
 This is because Windows uses its own custom timezone identifiers that do not have a one-to-one relationship with Olsen IDs.
 The Windows timezone ID is combined with the Windows GeoID to provide a best-guess that should generally be accurate.
@@ -29,12 +29,21 @@ But if your GeoID is 39 (Canada), then it will be reported as **America/Winnipeg
 ## Options
 
 Oftentimes the user may not be aware of their Olsen ID.
-You may prefer to use the aliased forms such that **America/New_York** appears as **America/Eastern**;
+You may prefer to use the aliased forms such that **America/New_York** appears as **America/Eastern**; this information can be found in CLDR's `commons/supplemental/metaZones.xml` (perhaps in a future version a `:meta-zone` option?).
 
 ## What if it doesn't work
 
-If there is a problem determining the timezone, the default will be `Etc/GMT`, being the most generic.
+If there is a problem determining the timezone, the default will be `Etc/GMT`, being the most generic, although that's not really an acceptable alternative.
 If it's clear that `UserTimezone` cannot determine things for your operating system, or is in some other way not returning the correct results, please file an issue on Github and let's figure out how to make it work on your system.
+
+# Version history
+
+  * **v0.1.1**
+    * Removed test code that prevented correct Windows detection.
+    * Chomped output to facilitate use in other modules.
+  * **v0.1**
+    * Initial release with support for macOS, most *nix machines and beta support Windows
+
 
 # License
 

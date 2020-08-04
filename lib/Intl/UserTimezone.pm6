@@ -34,7 +34,7 @@ sub nix {
 
 #| Calculate timezone based on alias localtime file.
 sub localtime-alias($path) {
-    my $timezone = (run 'readlink', $path, :out).out.slurp;
+    my $timezone = (run 'readlink', $path, :out).out.slurp.chomp;
     # Sample output:
     #   …timezone/zoneinfo/America/New_York
 
@@ -54,16 +54,12 @@ sub windows {
     # map nicely to the Olson/tz/IANA identifiers.
 
     # First, we grab the Windows timezone identifier
-    my $timezone = (run 'tzutil', '/g', :out).out.slurp;
+    my $timezone = (run 'tzutil', '/g', :out).out.slurp.chomp;
         # Sample output:
         #   "Central Standard Time"
 
-    $timezone = "Central Standard Time";
-
     # Next, we get the region (CST above could be US or Canada, for instance)
-    my $region = (run 'Powershell', '-command', '"Get-WinHomeLocation"', :out).out.slurp;
-
-    $region = 244; # united states
+    my $region = (run 'Powershell', '-command', '"Get-WinHomeLocation"', :out).out.slurp.chomp;
 
     # Finally, we map it by first grabbing the timezone equivalency data
     state %eqv;
