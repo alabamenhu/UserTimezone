@@ -1,12 +1,16 @@
-# Windows reports regions in a unique numerical format because of course.
-# To properly determine the optimal Olsen ID, a country or region ID is
-# also needed.  This file is a basic equivalency table, based on Microsoft's
-# table found at
+# Windows reports regions in a unique numerical format because of course it does.
+#
+# To properly determine the optimal Olsen ID, a country or region ID is also needed.
+# This file is a basic equivalency table, based on Microsoft's table found at
 # https://docs.microsoft.com/en-us/windows/win32/intl/table-of-geographical-locations
+#
 # The format of this file is simple:
 #   - Comments begin with #
 #   - Blank lines (or lines with only whitespace/comments) are ignored
 #   - Integer ID and Region ID are whitespace separated
+#
+# It is rare that this file should need to be edited, effectively, only be required when
+# a new country is formed.
 
 2    AG    # Antigua & Barbuda
 3    AF    # Afghanistan
@@ -395,10 +399,10 @@
 
 
 
-# These territories come out of CLDR and haven't been added into the equivalencies list yet
-# as they aren't currently in Windows.  If Windows adds one, make a change (theoretically CLDR should be stable).
+# The following territories are included in CLDR but aren't currently in Windows.
+# They are left here as a reminder, in case Windows opts to support them
 #
-#    EA   # Ceuta &amp; Melilla
+#    EA   # Ceuta & Melilla
 #    EH   # Western Sahara
 #    EU   # European Union
 #    EZ   # Eurozone
