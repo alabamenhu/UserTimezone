@@ -17,6 +17,29 @@ say user-timezone;  # 'America/New_York'
 The returned string does *not* apply a metazone.
 If you wish to show a user-facing string like, e.g., "Central European Time", you should use the appropriate functions from `Intl::DateTime` (NYI, might go into `DateTime::*`, haven't decided yet ^_^).
 
+## Options
+
+The default fallback (in case detection fails) is **Etc/GMT**. 
+If for some reason you wish to use a different one, pass it as a positional argument in the use statement.
+Note that this has *global* effects:
+
+    use Intl::UserTimezone 'Asia/Qyzylorda'
+    
+Similarly, you can *force* a certain timezone which is useful when testing out aspects of your program that may be sensitive to timezones.
+To do that, include the override option.
+
+    use Intl::UserTImezone :override;
+    
+This will import two additional subroutines into your scope:
+
+    override-user-timezone(Str $olson-id)
+    clear-user-timezone-override
+    
+These do exactly what their names imply.
+Again, be aware that their effects are global.
+
+## Compatibility / Implementation Notes
+
 For Mac OS and most *nix systems, the region is accurately grabbed from `/etc/localtime` if it exists. 
 Currently timezones indicated by the `$TZ` environmental variable are ignored, but will eventually be supported.
  
@@ -26,11 +49,6 @@ The Windows timezone ID is combined with the Windows GeoID to provide a best-gue
 For example, if your Windows timezone is "Central Standard Time", and your GeoID is 244 (United States), then it will be reported as **America/Chicago** (others are possible, but there is not enough information to differentiate with **America/Indiana/Knox**, so the broadest is used).
 But if your GeoID is 39 (Canada), then it will be reported as **America/Winnipeg**.
 
-## Options
-
-Oftentimes the user may not be aware of their Olsen ID.
-You may prefer to use the aliased forms such that **America/New_York** appears as **America/Eastern**; this information can be found in CLDR's `commons/supplemental/metaZones.xml` (perhaps in a future version a `:meta-zone` option?).
-
 ## What if it doesn't work
 
 If there is a problem determining the timezone, the default will be `Etc/GMT`, being the most generic, although that's not really an acceptable alternative.
@@ -38,6 +56,9 @@ If it's clear that `UserTimezone` cannot determine things for your operating sys
 
 # Version history
 
+  * **v0.2**
+    * Added option for a custom fallback (in case detection fails)
+    * Added ability for overriding the timezone (mainly for testing purposes)
   * **v0.1.1**
     * Removed test code that prevented correct Windows detection.
     * Chomped output to facilitate use in other modules.
