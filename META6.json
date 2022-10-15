@@ -1,17 +1,18 @@
 {
   "name": "UserTimezone",
   "description": "A simple module for determining the user's timezone.",
-  "version": "0.2",
+  "version": "0.3.0",
   "perl": "6.*",
   "authors": [
     "Matthew ‘Matéu’ Stephen STUCKWISCH <mateu@softastur.com>"
   ],
-  "auth": "github:alabamenhu",
+  "auth": "zef:guifa",
   "depends": [],
   "build-depends": [],
   "test-depends": [],
   "provides": {
-    "Intl::UserTimezone": "lib/Intl/UserTimezone.pm6"
+    "Intl::UserTimezone": "lib/Intl/UserTimezone.rakumod",
+    "User::Timezone": "lib/User/Timezone.rakumod"
   },
   "resources": [
     "windows-zones.data",

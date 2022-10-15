@@ -1,12 +1,12 @@
-# Intl::UserTimezone
-**Important notice:** This module *may* eventually be renamed to `DateTime::UserTimezone` prior to its 1.0 release; if that occurs, it will continue to *provide* under the current name for at least one year.  
+# User::Timezone
+**Important notice:** This module was previously known as  `Intl::UserTimezone`.  Its name was changed to align with similar modules.  It will still be usable as `Intl::UserTimezone` until the end of 2024 to give ample time for the change to happen.
 
 A simple Raku module for determining the user's timezone as an Olson (IANA or tz) identifier, particularly useful when formatting dates.
 
 To use:
 
 ```raku
-use Intl::UserTimezone
+use User::Timezone;
 
 say user-timezone;  # 'America/New_York'
                     # 'Africa/Malabo'
@@ -23,12 +23,12 @@ The default fallback (in case detection fails) is **Etc/GMT**.
 If for some reason you wish to use a different one, pass it as a positional argument in the use statement.
 Note that this has *global* effects:
 
-    use Intl::UserTimezone 'Asia/Qyzylorda'
+    use User::Timezone 'Asia/Qyzylorda'
     
 Similarly, you can *force* a certain timezone which is useful when testing out aspects of your program that may be sensitive to timezones.
 To do that, include the override option.
 
-    use Intl::UserTImezone :override;
+    use User::Timezone :override;
     
 This will import two additional subroutines into your scope:
 
@@ -52,12 +52,15 @@ But if your GeoID is 39 (Canada), then it will be reported as **America/Winnipeg
 ## What if it doesn't work
 
 If there is a problem determining the timezone, the default will be `Etc/GMT`, being the most generic, although that's not really an acceptable alternative.
-If it's clear that `UserTimezone` cannot determine things for your operating system, or is in some other way not returning the correct results, please file an issue on Github and let's figure out how to make it work on your system.
+If it's clear that `User::Timezone` cannot determine things for your operating system, or is in some other way not returning the correct results, please file an issue on Github and let's figure out how to make it work on your system.
 
 # Version history
 
+  * **v0.3**
+    * Changed name to `User::Timezone` and added a fallback message for older uses
+    * Adjusted Mac OS detection for improved accuracy
   * **v0.2**
-    * Added option for a custom fallback (in case detection fails)
+      * Added option for a custom fallback (in case detection fails)
     * Added ability for overriding the timezone (mainly for testing purposes)
   * **v0.1.1**
     * Removed test code that prevented correct Windows detection.
