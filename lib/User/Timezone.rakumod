@@ -18,10 +18,10 @@ sub EXPORT (
     sub user-timezone (--> Str) {
         .return with $UserTimezone::timezone;
         $UserTimezone::timezone = do given $*DISTRO  {
-            when .is-win   {  windows    }
-            when /macosx/  {    mac      }
-            when /linux/   {    nix      } # probably is the same as Mac?
-            CATCH          {  default {} } # By doing nothing, we fall through to…
+            when .is-win  {  windows    }
+            when /macos/  {    mac      }
+            when /linux/  {    nix      } # probably is the same as Mac?
+            CATCH         {  default {} } # By doing nothing, we fall through to…
         } // #`[error] $UserTimezone::fallback
     }
 
