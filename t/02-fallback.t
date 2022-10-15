@@ -1,6 +1,6 @@
 use Test;
 
-use Intl::UserTimezone 'This is not a real timezone';
+use User::Timezone 'This is not a real timezone';
 
 # Once again, a test that's not really possible to test in the traditional sense.
 # Before distributing a new version, insert a quick 'die' in the sub for your
@@ -8,5 +8,5 @@ use Intl::UserTimezone 'This is not a real timezone';
 # below successfully pass.
 
 # is user-timezone, 'This is not a real timezone';
-
+ok True;
 done-testing;

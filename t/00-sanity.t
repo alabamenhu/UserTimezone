@@ -11,10 +11,11 @@ and confirmed to display correct Olson IDs.
     System   |  Version  | Tested by
     =========|===========|==========
     Mac      |  10.15    | Matéu
+    Mac      |  12.6     | Matéu
 =end pod
 
 use Test;
-use Intl::UserTimezone;
+use User::Timezone;
 
 isnt user-timezone, Nil;
 

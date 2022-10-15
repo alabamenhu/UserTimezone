@@ -1,6 +1,6 @@
 use Test;
 
-use Intl::UserTimezone :override;
+use User::Timezone :override;
 
 # Test the override by putting in a fake timezone
 # since UserTimezone does not check for validity since
