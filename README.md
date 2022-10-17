@@ -56,9 +56,11 @@ If it's clear that `User::Timezone` cannot determine things for your operating s
 
 # Version history
 
-  * **v0.3**
-    * Changed name to `User::Timezone` and added a fallback message for older uses
-    * Adjusted Mac OS detection for improved accuracy
+  * **v0.3.1**
+    * Updated Windows zones data files
+  * **v0.3.0**
+      * Changed name to `User::Timezone` and added a fallback message for older uses
+      * Adjusted Mac OS detection for improved accuracy
   * **v0.2**
       * Added option for a custom fallback (in case detection fails)
     * Added ability for overriding the timezone (mainly for testing purposes)

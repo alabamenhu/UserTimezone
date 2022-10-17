@@ -1,7 +1,7 @@
 {
   "name": "UserTimezone",
   "description": "A simple module for determining the user's timezone.",
-  "version": "0.3.0",
+  "version": "0.3.1",
   "perl": "6.*",
   "authors": [
     "Matthew ‘Matéu’ Stephen STUCKWISCH <mateu@softastur.com>"
