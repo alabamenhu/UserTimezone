@@ -78,7 +78,7 @@ sub EXPORT (
 
         # Finally, we map it by first grabbing the timezone equivalency data
         state %eqv;
-        once for %?RESOURCES<windows-zones.data>.IO.slurp.split(',').rotor(3)
+        once for %?RESOURCES<windows-zones.data>.IO.slurp.split("\n").rotor(3)
               -> ($win, $cldr, $region) {
              %eqv{$win}{$region} = $cldr;
         }
