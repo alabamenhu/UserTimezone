@@ -6,9 +6,9 @@
 # the CLDR timeline.
 
 use XML;
-my $tz-output-file = "windows-zones.data".IO;
+my $tz-output-file = $*PROGRAM.parent.parent.add('resources/windows-zones.data').resolve.IO;
 
-my @win-zones = from-xml-file('windowsZones.xml').elements(:TAG<mapZone> :RECURSE);
+my @win-zones = from-xml-file($*PROGRAM.sibling('windowsZones.xml').Str).elements(:TAG<mapZone> :RECURSE);
 
 my @items;
 for @win-zones {
@@ -22,5 +22,5 @@ for @win-zones {
 @items.append( .<other    type    territory> ) for @win-zones;
              #   win-id  cldr-id   region
 
-$tz-output-file.spurt: @items.join(',');
+$tz-output-file.spurt: @items.join("\n");
 
