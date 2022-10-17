@@ -163,7 +163,7 @@
 159  MA    # Morocco
 160  MU    # Mauritius
            # 161 Undefined
-162        #    MR   # Mauritania
+162  MR    # Mauritania
 163  MT    # Malta
 164  OM    # Oman
 165  MV    # Maldives
@@ -265,7 +265,7 @@
 271  RS    # Serbia
            # 272 undefined
 273  CW    # Curaçao
-           # 275 undefined
+           # 274..275 undefined
 276  SS    # South Sudan
            # 277..299 undefined
 300  AI    # Anguilla
