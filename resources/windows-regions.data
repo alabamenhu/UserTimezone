@@ -323,7 +323,7 @@
            # 353..741 undefined
 742  002   # Africa
            # 743..2128 undefined
-2129
+2129  142  # Asia
            # 2130..10540 undefined
 10541  150 # Europe
            # 10542..15125 undefined
@@ -414,5 +414,4 @@
 #    ZZ   # Unknown Region
 #    053  # Australasia
 #    057  # Micronesian Region
-#    142  # Asia
 #    202  # Sub-Saharan Africa
