@@ -1,7 +1,7 @@
 {
-  "name": "UserTimezone",
+  "name": "User::Timezone",
   "description": "A simple module for determining the user's timezone.",
-  "version": "0.3.1",
+  "version": "0.3.2",
   "perl": "6.*",
   "authors": [
     "Matthew ‘Matéu’ Stephen STUCKWISCH <mateu@softastur.com>"
@@ -12,7 +12,10 @@
   "test-depends": [],
   "provides": {
     "Intl::UserTimezone": "lib/Intl/UserTimezone.rakumod",
-    "User::Timezone": "lib/User/Timezone.rakumod"
+    "User::Timezone": "lib/User/Timezone.rakumod",
+    "User::Timezone::Linux": "lib/User/Timezone/Linux.rakumod",
+    "User::Timezone::Mac": "lib/User/Timezone/Mac.rakumod",
+    "User::Timezone::Windows": "lib/User/Timezone/Windows.rakumod"
   },
   "resources": [
     "windows-zones.data",
