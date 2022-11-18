@@ -2,8 +2,19 @@ use v6.d;
 
 unit module Mac;
 
+use NativeCall;
+sub mac_native
+    returns Str is encoded('utf8')
+    is native(%?RESOURCES<macos/usertimezone.dylib>) {*}
+
 #| Obtains the default language(s) assuming a Mac system.
 sub mac is export {
+    CATCH { return mac_non-native }
+    return mac_native || mac_non-native;
+}
+
+sub mac_non-native {
+
     # Timezone, like in many *nix systems, can be determined by
     # the symbolic link at /etc/localtime.
     # NYI: also, the TZ environmental variable can be set, which
