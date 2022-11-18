@@ -1,7 +1,7 @@
 {
   "name": "User::Timezone",
   "description": "A simple module for determining the user's timezone.",
-  "version": "0.3.2",
+  "version": "0.3.3",
   "perl": "6.*",
   "authors": [
     "Matthew ‘Matéu’ Stephen STUCKWISCH <mateu@softastur.com>"
@@ -19,7 +19,8 @@
   },
   "resources": [
     "windows-zones.data",
-    "windows-regions.data"
+    "windows-regions.data",
+    "macos/usertimezone.dylib"
   ],
   "license": "Artistic-2.0",
   "source-url": "git://github.com/alabamenhu/UserTimezone.git"

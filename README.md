@@ -56,6 +56,8 @@ If it's clear that `User::Timezone` cannot determine things for your operating s
 
 # Version history
 
+  * **v0.3.3**
+    * Add native Mac support
   * **v0.3.2**
     * Minor adjustment to Windows regions data files
     * Code reorganization for improved future maintenance
